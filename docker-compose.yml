@@ -1,0 +1,12 @@
+services:
+  akz-opinie:
+    image: ghcr.io/automaat/akz-opinie:latest
+    container_name: akz-opinie
+    ports:
+      - '3000:3000'
+    volumes:
+      - akz-opinie-data:/data
+    restart: unless-stopped
+
+volumes:
+  akz-opinie-data:
