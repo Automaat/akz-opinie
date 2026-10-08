@@ -3,3 +3,5 @@ build
 node_modules
 data
 static/fonts
+CHANGELOG.md
+.release-please-manifest.json
