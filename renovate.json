@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", ":dependencyDashboard"],
+  "minimumReleaseAge": "7 days",
+  "packageRules": [
+    {
+      "description": "Minor and patch bumps merge on green CI; majors need review.",
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "automerge": true
+    },
+    {
+      "description": "ghcr.io and GitHub Actions expose no release timestamps.",
+      "matchDatasources": ["docker", "github-tags"],
+      "minimumReleaseAgeBehaviour": "timestamp-optional"
+    }
+  ]
+}
